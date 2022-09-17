@@ -21,12 +21,12 @@ public class PatientController {
         return "Hello world";
     }
 
-    @GetMapping
+    @GetMapping(value = "/get")
     public List<Patient> getAllPatients(){
         return patientService.getAllPatients();
     }
 
-    @PostMapping(value = "/add")
+    @PostMapping(value = "/post")
 //    @RequestMapping()
     private Patient addPatient(@RequestBody Patient patient){
         return patientRepository.save(patient);
