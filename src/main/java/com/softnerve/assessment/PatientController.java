@@ -16,6 +16,11 @@ public class PatientController {
 //        this.patientRepository = patientRepository;
 //    }
 
+    @GetMapping(value = "/test")
+    public String test(){
+        return "Hello world";
+    }
+
     @GetMapping
     public List<Patient> getAllPatients(){
         return patientService.getAllPatients();
